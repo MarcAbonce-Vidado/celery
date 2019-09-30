@@ -718,7 +718,7 @@ class Task(object):
         if is_eager:
             # if task was executed eagerly using apply(),
             # then the retry must also be executed eagerly.
-            S.apply().get()
+            S.apply()
             if throw:
                 raise ret
             return ret
